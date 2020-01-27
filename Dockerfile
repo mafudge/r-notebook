@@ -8,10 +8,9 @@ FROM jupyter/r-notebook:7a0c7325e470
 
 ENV NB_UID=1000
 ENV GRANT_SUDO=yes
-#RUN conda update --quiet --yes -n base conda
-#RUN conda install --quiet --yes geocoder lxml terminado numpy scipy requests pandas matplotlib html5lib rise folium pillow ipywidgets pip wheel
-#RUN conda install -c plotly chart-studio
-#RUN conda update --update-all
+COPY r-package.txt .
+RUN conda update --quiet --yes -n base conda
+RUN conda install --quiet --yes  --file r-packages.txt 
 
 USER root
 RUN apt-get update -y &&  apt-get install -y curl 
