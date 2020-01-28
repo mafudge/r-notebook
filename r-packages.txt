@@ -1,5 +1,4 @@
 r-arules 
-r-arulesViz 
 r-askpass 
 r-assertthat 
 r-backports 
@@ -82,7 +81,6 @@ r-httpuv
 r-httr 
 r-hunspell 
 r-igraph 
-r-imputeTS 
 r-ini 
 r-inum 
 r-ipred 

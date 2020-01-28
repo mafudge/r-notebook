@@ -8,9 +8,9 @@ FROM jupyter/r-notebook:7a0c7325e470
 
 ENV NB_UID=1000
 ENV GRANT_SUDO=yes
-COPY r-package.txt .
+#COPY r-packages.txt .
 RUN conda update --quiet --yes -n base conda
-RUN conda install --quiet --yes  --file r-packages.txt 
+#RUN conda install --quiet --yes  --file r-packages.txt 
 
 USER root
 RUN apt-get update -y &&  apt-get install -y curl 
